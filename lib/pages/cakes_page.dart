@@ -1,4 +1,5 @@
 import 'package:el_club/models/product.dart';
+
 import 'package:el_club/widget/my_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,21 +29,20 @@ class _CakePageState extends State<CakePage> {
         itemCount: cakeList.length,
         itemBuilder: (BuildContext context, int index) {
           Product product = cakeList[index];
-          return GestureDetector(
+          return InkWell(
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => DetailsPage(
-                    product: product,
-                  ),
+                  builder: (context) => DetailsPage(product: product),
                 ),
               );
             },
             child: CoffeeItem(
-                nameProduct: product.nameProduct,
-                descriptionProduct: product.descriptionProduct,
-                priceProduct: product.priceProduct,
-                pathImage: product.pathImage),
+              nameProduct: product.nameProduct,
+              descriptionProduct: product.descriptionProduct,
+              priceProduct: product.priceProduct,
+              pathImage: product.pathImage,
+            ),
           );
         },
       ),

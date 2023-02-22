@@ -1,3 +1,4 @@
+import 'package:el_club/pages/add_product_page.dart';
 import 'package:el_club/pages/cakes_page.dart';
 import 'package:el_club/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,19 @@ class MyDrawer extends StatelessWidget {
             leading: const Icon(Icons.cake_rounded),
             title: Text(
               "Aperitivos",
+              style: TextStyle(fontSize: 20, color: Colors.grey.shade600),
+            ),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const AddProductPage()),
+              );
+            },
+            leading: const Icon(Icons.add_shopping_cart_rounded),
+            iconColor: Colors.orange.shade500,
+            title: Text(
+              "Agregar Producto",
               style: TextStyle(fontSize: 20, color: Colors.grey.shade600),
             ),
           ),

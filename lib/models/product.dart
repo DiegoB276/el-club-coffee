@@ -10,6 +10,14 @@ class Product {
       required this.priceProduct,
       required this.pathImage,
       required this.ingredients});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'nameProduct': nameProduct,
+      'descriptionProduct': descriptionProduct,
+      'priceProduct': priceProduct
+    };
+  }
 }
 
 List<Product> hotDrinksList = [

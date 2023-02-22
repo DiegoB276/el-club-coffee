@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   intl: ^0.18.0
+  image_picker: ^0.8.6+1
+  sqflite: ^2.2.4+1
+  path: ^1.8.2
 
 dev_dependencies:
   flutter_test:

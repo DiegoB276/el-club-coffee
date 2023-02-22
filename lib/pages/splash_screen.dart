@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown.shade100,
+      backgroundColor: const Color.fromRGBO(226, 199, 174, 1),
       body: SafeArea(
         child: Center(
           child: Center(
@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
       floatingActionButton: Text("Powered by GodiApps",
-          style: GoogleFonts.ibmPlexMono(color: Colors.black38)),
+          style: GoogleFonts.ibmPlexMono(color: Colors.black45)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

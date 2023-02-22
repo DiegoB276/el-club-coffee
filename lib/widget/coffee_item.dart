@@ -6,13 +6,13 @@ class CoffeeItem extends StatelessWidget {
   String descriptionProduct;
   int priceProduct;
   String pathImage;
-  CoffeeItem(
-      {Key? key,
-      required this.nameProduct,
-      required this.descriptionProduct,
-      required this.priceProduct,
-      required this.pathImage})
-      : super(key: key);
+  CoffeeItem({
+    Key? key,
+    required this.nameProduct,
+    required this.descriptionProduct,
+    required this.priceProduct,
+    required this.pathImage,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
