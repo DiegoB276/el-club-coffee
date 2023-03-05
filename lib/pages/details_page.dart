@@ -65,9 +65,9 @@ class _DetailsPageState extends State<DetailsPage> {
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 360,
-                      child: ClipRRect(
+                      /*child: ClipRRect(
                         child: Image.asset(
                           widget.product.pathImage,
                           //"assets/bebidas/hot_drinks/latte.jpg",
@@ -76,7 +76,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           fit: BoxFit.fitHeight,
                           width: double.infinity,
                         ),
-                      ),
+                      ),*/
                     ),
                     Positioned(
                       top: 50,
@@ -112,7 +112,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       child: Text(
                         //"Chocolate con Mavaviscos",
                         textAlign: TextAlign.start,
-                        widget.product.nameProduct,
+                        widget.product.name!.toString(),
                         style: GoogleFonts.rowdies(
                             color: Colors.grey.shade800, fontSize: 50),
                       ),
@@ -125,7 +125,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 40, right: 40),
                   child: Text(
-                    widget.product.descriptionProduct,
+                    widget.product.description!.toString(),
                     style: const TextStyle(fontSize: 17),
                     textAlign: TextAlign.justify,
                   ),
@@ -182,7 +182,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     child: Padding(
                       padding: const EdgeInsets.all(8),
                       child: Text(
-                        "\$${widget.product.priceProduct.toString()}",
+                        "\$${widget.product.price.toString()}",
                         style:
                             const TextStyle(color: Colors.orange, fontSize: 30),
                       ),
@@ -197,7 +197,7 @@ class _DetailsPageState extends State<DetailsPage> {
 
       //Boton flotante para ver los ingredientes
       floatingActionButton: InkWell(
-        onTap: () => showMyAlert(context, widget.product),
+        /*onTap: () => showMyAlert(context, widget.product),*/
         child: Container(
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 241, 175, 75),

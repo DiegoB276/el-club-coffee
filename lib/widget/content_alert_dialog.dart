@@ -21,11 +21,11 @@ class ContentOfAlertDialog extends StatelessWidget {
         color: const Color.fromARGB(255, 248, 188, 114),
       ),
       child: ListView.builder(
-        itemCount: widget.product.ingredients.length,
+        //itemCount: widget.product.ingredients.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             title: Text(
-              " ${index + 1}. ${widget.product.ingredients[index]}",
+              /*" ${index + 1}. ${widget.product.ingredients[index]}"*/ "",
               style: GoogleFonts.signikaNegative(fontSize: 30),
             ),
           );

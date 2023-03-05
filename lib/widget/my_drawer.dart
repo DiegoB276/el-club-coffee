@@ -1,7 +1,10 @@
 import 'package:el_club/pages/add_product_page.dart';
 import 'package:el_club/pages/cakes_page.dart';
-import 'package:el_club/pages/home_page.dart';
+import 'package:el_club/pages/cold_drinks_page.dart';
+import 'package:el_club/pages/hot_drinks_page.dart';
 import 'package:flutter/material.dart';
+
+import '../pages/home_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({
@@ -41,9 +44,36 @@ class MyDrawer extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const HomePage()),
               );
             },
+            leading: Icon(
+              Icons.category,
+              color: Colors.orange.shade500,
+            ),
+            title: Text(
+              "Todos los Productos",
+              style: TextStyle(fontSize: 20, color: Colors.grey.shade600),
+            ),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const HotDrinksPage()),
+              );
+            },
             leading: const Icon(Icons.coffee),
             title: Text(
-              "Bebidas",
+              "Bebidas Calientes",
+              style: TextStyle(fontSize: 20, color: Colors.grey.shade600),
+            ),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const ColdDrinksPage()),
+              );
+            },
+            leading: const Icon(Icons.wine_bar),
+            title: Text(
+              "Bebidas Frias",
               style: TextStyle(fontSize: 20, color: Colors.grey.shade600),
             ),
           ),
@@ -62,7 +92,14 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             onTap: () {
               Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const AddProductPage()),
+                MaterialPageRoute(
+                  builder: (context) => const AddProductPage(
+                      productId: null,
+                      productName: null,
+                      productDescription: null,
+                      productPrice: null,
+                      productType: null),
+                ),
               );
             },
             leading: const Icon(Icons.add_shopping_cart_rounded),

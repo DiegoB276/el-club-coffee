@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 //Subir una imagen desde galería
@@ -8,3 +8,4 @@ Future<XFile?> getImage() async {
 
   return image;
 }
+*/
